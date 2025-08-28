@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobeTrotter - Agence de Voyage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background: url('img/destination.jpg') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgb(223, 118, 118);
+    }
+       .social{
+        font-size: 40px;
+        padding-bottom: 10px; 
+        text-align: center;  
+    }
+    .social-icons a i{
+     padding: 5px 20px;
+     color: rgb(201, 217, 231);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">GlobeTrotter</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Circuits</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1 class="display-3 fw-bold">Explorez le Monde</h1>
+    <p class="lead">Des voyages inoubliables vers des destinations de rêve</p>
+    <a href="#destinations" class="btn btn-primary btn-lg mt-3">Découvrir</a>
+  </div>
+</section>
+<section id="destinations" class="container py-5">
+  <h2 class="text-center mb-4">Destinations Populaires</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <h5 class="card-title">Paris</h5>
+          <p>La ville de l’amour et de la gastronomie.</p>
+           <img src="Img/paris.jpg" class="card-img-top" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <h5 class="card-title">Maldives</h5>
+          <p>Plages paradisiaques et eau turquoise.</p>
+           <img src="Img/maldive.jpg" class="card-img-top" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <h5 class="card-title">New York</h5>
+          <p>La ville qui ne dort jamais.</p>
+          <img src="Img/new-york.jpg" class="card-img-top" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="circuits" class="container py-5">
+  <h2 class="text-center mb-4">Nos Circuits</h2>
+  <div class="accordion" id="travelAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#circuit1">Circuit en Europe</button>
+      </h2>
+      <div id="circuit1" class="accordion-collapse collapse show" data-bs-parent="#travelAccordion">
+        <div class="accordion-body">
+          Découvrez les capitales européennes. <a href="#">Voir les détails</a>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#circuit2">Safari en Afrique</button>
+      </h2>
+      <div id="circuit2" class="accordion-collapse collapse" data-bs-parent="#travelAccordion">
+        <div class="accordion-body">
+          Explorez la savane africaine. <a href="#">Voir les détails</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact" class="container py-5">
+  <h2 class="text-center mb-4">Contactez-nous</h2>
+  <form>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Votre nom">
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control" placeholder="Votre email">
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Destination d'intérêt">
+    </div>
+    <div class="mb-3">
+      <textarea class="form-control" rows="4" placeholder="Votre message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success w-100">Envoyer</button>
+  </form>
+</section>
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2025 GlobeTrotter - Tous droits réservés</p>
+   <div class="footer-socials">
+      <h4 class="social">Suivez-nous</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
