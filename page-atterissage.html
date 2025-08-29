@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique en Ligne</title>
+  <style>
+    /*  RESET DE BASE  */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* - HEADER -- */
+    header {
+      background: #222;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+
+    /* - HERO SECTION --- */
+    .hero {
+      background: url('img/boutique.jpg') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #da2121;
+      padding: 20px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .hero button {
+      background: #ff9800;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .hero button:hover {
+      background: #e68900;
+    }
+
+    /* ------------------- PRODUITS ------------------- */
+    .products {
+      padding: 50px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .products h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #222;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product .info {
+      padding: 15px;
+    }
+    .product h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .product p {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      color: #666;
+    }
+    .product button {
+      width: 100%;
+      padding: 10px;
+      background: #ff9800;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .product button:hover {
+      background: #e68900;
+    }
+
+    /* ------------------- FOOTER ------------------- */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    /* ------------------- RESPONSIVE ------------------- */
+    @media (max-width: 992px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+  </style>
+</head>
+<body>
+
+  <!-- ---------------- HEADER ---------------- -->
+  <header>
+    <h1 class="topbar">Ma Boutique</h1>
+    <nav class="topbar-nav">
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#products">Produits</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ---------------- HERO ---------------- -->
+  <section class="hero">
+    <div>
+      <h2>Nouvelle Collection 2025</h2>
+      <button>Découvrir maintenant</button>
+    </div>
+  </section>
+
+  <!-- ---------------- PRODUITS ---------------- -->
+  <section id="products" class="products">
+    <h2>Nos Produits</h2>
+    <div class="product-grid">
+      <!-- Produit 1 -->
+      <div class="product">
+        <div class="info">
+          <h3>Chaussures de sport</h3>
+          <p>Confortables et élégantes, idéales pour vos activités quotidiennes.</p>
+           <img src="img/chaussure.jpg" alt="Produit 1">
+          <button>Acheter maintenant</button>
+        </div>
+      </div>
+      <!-- Produit 2 -->
+      <div class="product">
+        <div class="info">
+          <h3>Sac à main</h3>
+          <p>Un design moderne pour un style chic en toutes circonstances.</p>
+          <img src="img/sac.jpg" alt="Produit 2">
+          <button>Acheter maintenant</button>
+        </div>
+      </div>
+      <!-- Produit 3 -->
+      <div class="product">
+        <div class="info">
+          <h3>Montre élégante</h3>
+          <p>Accessoire parfait pour compléter votre tenue.</p>
+          <img src="img/montre.jpg" alt="Produit 3">
+          <button>Acheter maintenant</button>
+        </div>
+      </div>
+      <!-- Produit 4 -->
+      <div class="product">
+        <div class="info">
+          <h3>T-shirt tendance</h3>
+          <p>Fabriqué en coton de qualité pour un confort optimal.</p>
+           <img src="img/short.jpg" alt="Produit 4">
+          <button>Acheter maintenant</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- FOOTER ---------------- -->
+  <footer id="contact">
+    <p>&copy; 2025 Ma Boutique - Tous droits réservés</p>
+    <p>Suivez-nous sur les réseaux sociaux</p>
+  </footer>
+
+</body>
+</html>
