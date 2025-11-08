@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie de Produits</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛍️ Galerie de Produits</h1>
+    <div class="controls">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">Tout</button>
+        <button class="filter-btn" data-category="nature">Nature</button>
+        <button class="filter-btn" data-category="tech">Technologie</button>
+        <button class="filter-btn" data-category="fashion">Mode</button>
+      </div>
+      <button id="theme-toggle">🌙 Mode sombre</button>
+    </div>
+  </header>
+
+  <main class="gallery">
+    <!-- Carte 1 -->
+    <div class="card fade-in" data-category="nature">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Nature" />
+      <h2>Forêt tropicale</h2>
+      <p>Une magnifique forêt tropicale regorgeant de vie et de verdure.</p>
+      <button>Découvrir</button>
+    </div>
+
+    <!-- Carte 2 -->
+    <div class="card fade-in" data-category="tech">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Technologie" />
+      <h2>Ordinateur moderne</h2>
+      <p>Puissance et performance dans un design minimaliste.</p>
+      <button>Voir plus</button>
+    </div>
+
+    <!-- Carte 3 -->
+    <div class="card fade-in" data-category="fashion">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Mode" />
+      <h2>Collection élégante</h2>
+      <p>Des vêtements raffinés pour toutes les saisons.</p>
+      <button>Découvrir</button>
+    </div>
+
+    <!-- Carte 4 -->
+    <div class="card fade-in" data-category="nature">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Nature 2" />
+      <h2>Montagnes enneigées</h2>
+      <p>Des paysages majestueux où règne la tranquillité.</p>
+      <button>Explorer</button>
+    </div>
+
+    <!-- Carte 5 -->
+    <div class="card fade-in" data-category="tech">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Technologie 2" />
+      <h2>Robot intelligent</h2>
+      <p>L’intelligence artificielle au service de l’homme.</p>
+      <button>Détails</button>
+    </div>
+
+    <!-- Carte 6 -->
+    <div class="card fade-in" data-category="fashion">
+      <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=800&q=80" alt="Mode 2" />
+      <h2>Accessoires stylés</h2>
+      <p>Un style qui reflète votre personnalité unique.</p>
+      <button>Découvrir</button>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="Image agrandie" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
