@@ -1,0 +1,7 @@
+🔹 Prompt :
+« Corrige les erreurs HTML et CSS dans ce composant 
+de carte de prix. Rends-le moderne, propre et réutilisable
+ sous forme de fonction Card(title, price, features). 
+ Assure-toi que les boutons fonctionnent et que la mise
+  en page soit bien centrée avec des bords arrondis et 
+  une ombre douce. »

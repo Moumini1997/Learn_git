@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing Card Component</title>
+<style>
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pricing {
+  width: 320px;
+  background-color: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.pricing:hover {
+  transform: translateY(-5px);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 20px;
+  color: #2ecc71;
+  margin-bottom: 16px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.features li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.btn {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+</style>
+</head>
+<body>
+
+<!-- Composant généré par JS -->
+<div id="pricing-container"></div>
+
+<script>
+function createPricingCard({ title, price, features }) {
+  const card = document.createElement("div");
+  card.className = "pricing";
+
+  const titleEl = document.createElement("h2");
+  titleEl.className = "title";
+  titleEl.textContent = title;
+
+  const priceEl = document.createElement("p");
+  priceEl.className = "price";
+  priceEl.textContent = price;
+
+  const featureList = document.createElement("ul");
+  featureList.className = "features";
+  features.forEach(f => {
+    const li = document.createElement("li");
+    li.textContent = f;
+    featureList.appendChild(li);
+  });
+
+  const button = document.createElement("button");
+  button.className = "btn";
+  button.textContent = "Start Trial";
+  button.addEventListener("click", () => {
+    alert(`You selected the ${title} plan!`);
+  });
+
+  card.appendChild(titleEl);
+  card.appendChild(priceEl);
+  card.appendChild(featureList);
+  card.appendChild(button);
+
+  return card;
+}
+
+// Exemple d'utilisation :
+const basicCard = createPricingCard({
+  title: "Basic Plan",
+  price: "$9.99 / month",
+  features: ["1 GB Storage", "Basic Support", "All Core Features"]
+});
+
+document.getElementById("pricing-container").appendChild(basicCard);
+</script>
+
+</body>
+</html>
